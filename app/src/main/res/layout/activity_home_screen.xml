@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeScreen"
+    android:background="@color/colorWhite">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorWhite"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/textColor1"
+        android:elevation="@dimen/dp_5">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:hint="@string/title"
+        android:textColor="@color/colorAccent"
+        android:inputType="textCapWords"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:textSize="@dimen/sp_20"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintEnd_toStartOf="@id/newJournalEditButton"
+        android:layout_marginEnd="@dimen/dp_100"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+    <EditText
+        android:id="@+id/etDescrioption"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:hint="@string/description"
+        android:textColor="@color/colorAccent"
+        android:inputType="textCapWords"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:textSize="@dimen/sp_16"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        app:layout_constraintStart_toStartOf="@id/etTitle"
+        app:layout_constraintEnd_toEndOf="@id/etTitle"
+        android:layout_marginEnd="@dimen/dp_100"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"/>
+
+
+    <ImageButton
+        android:id="@+id/newJournalEditButton"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:contentDescription="@string/new_journal"
+        android:src="@drawable/ic_baseline_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etTitle"
+        app:layout_constraintBottom_toBottomOf="@id/etTitle"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/addImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/etDescrioption"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_5"
+        android:drawablePadding="@dimen/dp_5"
+        app:drawableStartCompat="@drawable/ic_image"
+        android:textStyle="bold"
+        android:background="@drawable/add_disabled_bg"
+        android:layout_marginStart="@dimen/dp_20"
+        app:drawableTint="@color/textColor1"
+        android:textColor="@color/textColor1"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
